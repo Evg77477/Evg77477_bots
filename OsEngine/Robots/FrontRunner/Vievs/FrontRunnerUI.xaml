@@ -1,0 +1,101 @@
+﻿<Window x:Class="OsEngine.Robots.FrontRunner.Vievs.FrontRunnerUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OsEngine.Robots.FrontRunner.Vievs" 
+        mc:Ignorable="d"
+        Title="FrontRunnerUI" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBlock">            
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Margin" Value="5, 5"/>            
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Крупный объем"/>
+        <TextBlock Text="Отступ" Grid.Row="1"/>
+        <TextBlock Text="Тейк профит" Grid.Row="2"/>
+        <TextBlock Text="Лот" Grid.Row="3"/>
+        <TextBlock Text="Статус бота:" Grid.Row="5"/>
+        <TextBlock Text="Статус позиции:" Grid.Row="6"/>
+        <TextBlock Text="Данные по открытой позиции" HorizontalAlignment="Center"
+                   Grid.Row="7" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <TextBlock Text="Направление сделки" Grid.Row="8"/>
+        <TextBlock Text="Открытый объем" Grid.Row="9"/>
+        <TextBlock Text="Цена входа в сделку" Grid.Row="10"/>
+        <TextBlock Text="Статус выставления Тейк профит для позиции" Grid.Row="11"/>
+        <TextBlock Text="Цена для закрытия по Тейк профит" Grid.Row="12"/>
+        <TextBlock Text="Торговые результаты" HorizontalAlignment="Center"
+                   Grid.Row="13" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <TextBlock Text="Вариационная маржа" Grid.Row="14"/>
+        <TextBlock Text="Накопленная прибыль" Grid.Row="15"/>
+
+        <TextBox Text="{Binding BigVolume}" 
+                 Grid.Column="1" Grid.Row="0"/>
+
+        <TextBox Text="{Binding Offset}" 
+                 Grid.Column="1" Grid.Row="1"/>
+
+        <TextBox Text="{Binding Take}" 
+                 Grid.Column="1" Grid.Row="2"/>
+
+        <TextBox Text="{Binding Lot}" 
+                 Grid.Column="1" Grid.Row="3"/>
+        <TextBlock Text="{Binding BotStatus}" 
+                 Grid.Column="1" Grid.Row="5"/>
+
+        <TextBlock Text="{Binding PositionStatus}" 
+                 Grid.Column="1" Grid.Row="6"/>
+
+        <TextBlock Text="{Binding PositionSide}" 
+                 Grid.Column="1" Grid.Row="8"/>
+
+        <TextBlock Text="{Binding OpeningVolume}" 
+                 Grid.Column="1" Grid.Row="9"/>
+
+        <TextBlock Text="{Binding OpeningPrice}" 
+                 Grid.Column="1" Grid.Row="10"/>
+
+        <TextBlock Text="{Binding TakeStatus}" 
+                 Grid.Column="1" Grid.Row="11"/>
+
+        <TextBlock Text="{Binding TakePrice}" 
+                 Grid.Column="1" Grid.Row="12"/>
+
+        <TextBlock Text="{Binding VariationMargin}" 
+                 Grid.Column="1" Grid.Row="14"/>
+
+        <TextBlock Text="{Binding AccumulatedProfit}" 
+                 Grid.Column="1" Grid.Row="15"/>
+
+        <Button Content="{Binding Edit}"
+            Command="{Binding CommandStart}"
+            Grid.Column="1" Grid.Row="4"/>
+    </Grid>
+</Window>
+
