@@ -25,6 +25,7 @@ using OsEngine.Robots.OnScriptIndicators;
 using OsEngine.Robots.Screeners;
 using OsEngine.Robots.FrontRunner.Models;
 using OsEngine.Robots.MyTestRobot;
+using OsEngine.Robots.PriceChanel;
 
 namespace OsEngine.Robots
 {
@@ -42,6 +43,7 @@ namespace OsEngine.Robots
             result.Add("SmaScreener");
             result.Add("MyTestBot");
             result.Add("FrontRunnerBot");
+            result.Add("PriceChanelFix");
             result.Add("Fisher");
             result.Add("Engine");
             result.Add("ScreenerEngine");
@@ -122,6 +124,10 @@ namespace OsEngine.Robots
                 return bot;
             }
 
+            if (nameClass == "PriceChanelFix")
+            {
+                bot = new PriceChanelFix(name, startProgram); 
+            }
             if (nameClass == "FrontRunnerBot")
             {
                 bot = new FrontRunnerBot(name, startProgram);
